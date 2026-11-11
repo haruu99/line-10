@@ -1,6 +1,10 @@
 # Line 10
 
-A Video.js video skin for HTML, styled with CSS. It started from the Scaffold skin.
+**Every control is a sign.** A Video.js v10 skin drawn like a metro line: the seek bar is the line diagram, chapters are stations, the clock is a split-flap board, and the state is an LED strip. HTML and CSS, started from the Scaffold skin.
+
+**Live showcase:** https://haruu99.github.io/line-10/
+
+The skin is `src/video/`. The showcase page is `site/` (`npm run site`, `npm run site:build`). Its encoded demo media isn't in this branch; it is served from `gh-pages`.
 
 ## Develop
 
