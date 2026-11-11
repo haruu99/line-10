@@ -1,0 +1,402 @@
+<media-container class="media-skin media-container media-video l10" data-theme="scaffold" data-preset="video" data-skin="line10">
+<!-- Add a compatible media component here. -->
+<media-poster class="media-poster">
+<img alt="" decoding="async" class="media-poster-image">
+</media-poster>
+
+<!-- Service disruption: the error dialog as a hazard-striped station notice. -->
+<media-error-dialog>
+<media-dialog-backdrop class="media-dialog-backdrop l10-dialog-backdrop"></media-dialog-backdrop>
+<media-dialog-popup class="media-dialog-popup l10-notice">
+<div class="l10-notice-hazard" aria-hidden="true"></div>
+<div class="l10-notice-body">
+<p class="l10-notice-kicker"><media-text token="line10.pid.disruption">Service disruption</media-text></p>
+<media-dialog-title class="media-dialog-title l10-notice-title"></media-dialog-title>
+<media-dialog-description class="media-dialog-description l10-notice-text"></media-dialog-description>
+<media-dialog-close class="media-button media-dialog-close l10-notice-close"></media-dialog-close>
+</div>
+</media-dialog-popup>
+</media-error-dialog>
+
+<media-controls>
+<media-controls-backdrop class="video-controls-backdrop l10-scrim"></media-controls-backdrop>
+
+<!-- Approaching: the buffering indicator as an LED countdown. -->
+<media-controls-group class="media-buffering-indicator-controls">
+<media-buffering-indicator class="media-buffering-indicator l10-approach">
+<span class="l10-approach-plate">
+<span class="l10-led-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+<span class="l10-led-text"><media-text token="line10.pid.approaching">Approaching</media-text></span>
+</span>
+</media-buffering-indicator>
+</media-controls-group>
+
+<media-controls-content class="video-controls-content l10-content">
+<media-tooltip-group>
+
+<!-- Destination blind -->
+<media-controls-group class="video-controls-top l10-top">
+<div class="l10-blind">
+<span class="l10-bullet" aria-hidden="true"><span>10</span></span>
+<div class="l10-blind-text">
+<span class="l10-towards" data-l10-station-wrap><media-text class="l10-towards-word" token="line10.towards">towards</media-text> <l10-station class="l10-terminus" mode="terminus"></l10-station></span>
+<media-title class="media-title l10-title"></media-title>
+</div>
+</div>
+<l10-pid class="l10-pid">
+<span class="l10-pid-text" data-for="ready"><media-text token="line10.pid.ready">Ready to depart</media-text></span>
+<span class="l10-pid-text" data-for="held"><media-text token="line10.pid.held">Holding at platform</media-text></span>
+<span class="l10-pid-text" data-for="moving"><media-text token="line10.pid.moving">In service</media-text></span>
+<span class="l10-pid-text" data-for="approaching"><media-text token="line10.pid.approaching">Approaching</media-text></span>
+<span class="l10-pid-text" data-for="terminus"><media-text token="line10.pid.terminus">This service terminates here</media-text></span>
+<span class="l10-pid-text" data-for="quiet"><media-text token="line10.pid.quiet">Quiet carriage</media-text></span>
+<span class="l10-pid-text" data-for="express"><media-text token="line10.pid.express">Express service</media-text></span>
+<span class="l10-pid-text" data-for="stopping"><media-text token="line10.pid.stopping">Stopping service</media-text></span>
+<span class="l10-pid-text" data-for="disruption"><media-text token="line10.pid.disruption">Service disruption</media-text></span>
+</l10-pid>
+<media-airplay-button class="media-button l10-btn media-airplay-button" id="l10-airplay-trigger">
+<media-icon family="line10" name="airplay-enter" class="media-button-icon media-airplay-button-enter-icon"></media-icon>
+<media-icon family="line10" name="airplay-exit" class="media-button-icon media-airplay-button-exit-icon"></media-icon>
+</media-airplay-button>
+<media-tooltip trigger="l10-airplay-trigger" side="bottom" class="media-popup media-popup-safe-area media-tooltip-popup l10-tip">
+<media-tooltip-label></media-tooltip-label>
+<media-tooltip-shortcut class="media-tooltip-shortcut"></media-tooltip-shortcut>
+</media-tooltip>
+<media-cast-button class="media-button l10-btn media-cast-button" id="l10-cast-trigger">
+<media-icon family="line10" name="cast-enter" class="media-button-icon media-cast-button-enter-icon"></media-icon>
+<media-icon family="line10" name="cast-exit" class="media-button-icon media-cast-button-exit-icon"></media-icon>
+</media-cast-button>
+<media-tooltip trigger="l10-cast-trigger" side="bottom" class="media-popup media-popup-safe-area media-tooltip-popup l10-tip">
+<media-tooltip-label></media-tooltip-label>
+<media-tooltip-shortcut class="media-tooltip-shortcut"></media-tooltip-shortcut>
+</media-tooltip>
+<media-pip-button class="media-button l10-btn media-pip-button" id="l10-pip-trigger">
+<media-icon family="line10" name="pip-enter" class="media-button-icon media-pip-button-enter-icon"></media-icon>
+<media-icon family="line10" name="pip-exit" class="media-button-icon media-pip-button-exit-icon"></media-icon>
+</media-pip-button>
+<media-tooltip trigger="l10-pip-trigger" side="bottom" class="media-popup media-popup-safe-area media-tooltip-popup l10-tip">
+<media-tooltip-label></media-tooltip-label>
+<media-tooltip-shortcut class="media-tooltip-shortcut"></media-tooltip-shortcut>
+</media-tooltip>
+</media-controls-group>
+
+<!-- Centre roundel: depart / ride again -->
+<media-buffering-indicator class="video-controls-buffering">
+<media-controls-group class="video-controls-center l10-center">
+<media-play-button class="media-button media-play-button video-controls-center-button video-controls-center-play l10-roundel" id="l10-center-play">
+<media-icon family="line10" name="restart" class="media-button-icon-base media-play-button-restart-icon video-controls-center-play-icon"></media-icon>
+<media-icon family="line10" name="play" class="media-button-icon-base media-play-button-play-icon video-controls-center-play-icon"></media-icon>
+<media-icon family="line10" name="pause" class="media-button-icon-base media-play-button-pause-icon video-controls-center-play-icon"></media-icon>
+</media-play-button>
+</media-controls-group>
+</media-buffering-indicator>
+
+<!-- The signage plate -->
+<div class="video-controls-bottom video-controls-video-bottom l10-plate">
+<div class="video-controls-slider-row l10-line-row">
+<l10-station-labels class="l10-labels"></l10-station-labels>
+<media-time-slider class="media-time-slider l10-line" thumb-alignment="center">
+<media-time-slider-chapters class="media-time-slider-chapters l10-segments">
+<template>
+<div class="l10-seg">
+<div class="media-time-slider-chapter l10-seg-clip">
+<media-slider-track class="media-time-slider-track l10-track">
+<media-slider-buffer class="media-time-slider-buffer l10-buffer"></media-slider-buffer>
+<media-slider-fill class="media-time-slider-fill l10-fill"></media-slider-fill>
+</media-slider-track>
+</div>
+<span class="l10-station-dot" aria-hidden="true"></span>
+</div>
+</template>
+</media-time-slider-chapters>
+<span class="l10-terminus-bar" aria-hidden="true"></span>
+<media-slider-thumb class="media-time-slider-thumb l10-marker"></media-slider-thumb>
+<media-slider-preview class="media-time-slider-preview l10-sign">
+<media-slider-thumbnail class="media-slider-thumbnail l10-sign-thumb">
+<img alt="" aria-hidden="true" decoding="async" class="media-slider-thumbnail-image">
+</media-slider-thumbnail>
+<div class="media-time-slider-preview-meta l10-sign-plate">
+<media-time-slider-chapter-title class="media-time-slider-chapter-title l10-sign-name"></media-time-slider-chapter-title>
+<media-slider-value class="media-time-slider-value l10-sign-time" type="pointer"></media-slider-value>
+</div>
+</media-slider-preview>
+</media-time-slider>
+</div>
+
+<media-controls-group class="video-controls-row l10-row">
+<media-controls-group class="video-controls-group video-controls-start l10-start">
+<media-play-button class="media-button media-play-button l10-btn l10-play" id="l10-play-trigger">
+<media-icon family="line10" name="restart" class="media-button-icon-base media-play-button-restart-icon"></media-icon>
+<media-icon family="line10" name="play" class="media-button-icon-base media-play-button-play-icon"></media-icon>
+<media-icon family="line10" name="pause" class="media-button-icon-base media-play-button-pause-icon"></media-icon>
+</media-play-button>
+<media-tooltip trigger="l10-play-trigger" side="top" class="media-popup media-popup-safe-area media-tooltip-popup l10-tip">
+<media-tooltip-label></media-tooltip-label>
+<media-tooltip-shortcut class="media-tooltip-shortcut"></media-tooltip-shortcut>
+</media-tooltip>
+
+<media-seek-button seconds="-10" class="media-button l10-btn l10-seek l10-seek-back" id="l10-back-trigger">
+<media-icon family="line10" name="restart" class="media-button-icon"></media-icon>
+<span class="l10-seek-num" aria-hidden="true">10</span>
+</media-seek-button>
+<media-tooltip trigger="l10-back-trigger" side="top" class="media-popup media-popup-safe-area media-tooltip-popup l10-tip">
+<media-tooltip-label></media-tooltip-label>
+<media-tooltip-shortcut class="media-tooltip-shortcut"></media-tooltip-shortcut>
+</media-tooltip>
+<media-seek-button seconds="10" class="media-button l10-btn l10-seek l10-seek-fwd" id="l10-fwd-trigger">
+<media-icon family="line10" name="seek" class="media-button-icon"></media-icon>
+<span class="l10-seek-num" aria-hidden="true">10</span>
+</media-seek-button>
+<media-tooltip trigger="l10-fwd-trigger" side="top" class="media-popup media-popup-safe-area media-tooltip-popup l10-tip">
+<media-tooltip-label></media-tooltip-label>
+<media-tooltip-shortcut class="media-tooltip-shortcut"></media-tooltip-shortcut>
+</media-tooltip>
+
+<media-mute-button class="media-button media-mute-button l10-btn" id="l10-mute-trigger">
+<media-icon family="line10" name="volume-off" class="media-button-icon media-mute-button-off-icon"></media-icon>
+<media-icon family="line10" name="volume-high" class="media-button-icon media-mute-button-high-icon"></media-icon>
+</media-mute-button>
+<media-tooltip trigger="l10-mute-trigger" side="top" class="media-popup media-popup-safe-area media-tooltip-popup l10-tip">
+<media-tooltip-label></media-tooltip-label>
+<media-tooltip-shortcut class="media-tooltip-shortcut"></media-tooltip-shortcut>
+</media-tooltip>
+<media-volume-slider class="media-volume-slider l10-branch" orientation="horizontal" thumb-alignment="center">
+<media-slider-track class="media-volume-slider-track l10-branch-track">
+<media-slider-fill class="media-volume-slider-fill l10-branch-fill"></media-slider-fill>
+</media-slider-track>
+<media-slider-thumb class="media-volume-slider-thumb l10-branch-thumb"></media-slider-thumb>
+</media-volume-slider>
+
+<!-- Split-flap board. The real <media-time> values stay for assistive tech. -->
+<media-time-group class="media-time-group l10-board">
+<l10-flap class="l10-flap" type="current"></l10-flap>
+<media-time class="media-time-current-value l10-sr" type="current"></media-time>
+<media-time-separator class="media-time-separator l10-board-sep"></media-time-separator>
+<l10-flap class="l10-flap l10-flap-total" type="duration"></l10-flap>
+<media-time class="media-time-duration-value l10-sr" type="duration"></media-time>
+</media-time-group>
+
+<span class="l10-now" data-l10-station-wrap>
+<span class="l10-now-label"><media-text token="line10.now">Now at</media-text></span>
+<l10-station class="l10-now-name" mode="current"></l10-station>
+</span>
+</media-controls-group>
+
+<media-controls-group class="video-controls-group l10-end">
+<button commandfor="l10-stops-popup" class="media-button l10-btn l10-stops-btn" id="l10-stops-trigger" type="button">
+<media-icon family="line10" name="stops" class="media-button-icon"></media-icon>
+<media-text class="media-settings-button-label" token="line10.stops">Stops</media-text>
+</button>
+<media-tooltip trigger="l10-stops-trigger" side="top" class="media-popup media-popup-safe-area media-tooltip-popup l10-tip">
+<media-text token="line10.stops">Stops</media-text>
+</media-tooltip>
+<media-menu side="top" align="end" class="media-popup media-popup-safe-area media-menu-popup l10-menu l10-timetable" id="l10-stops-popup">
+<media-menu-content class="media-menu-content l10-menu-content">
+<div class="l10-menu-head" aria-hidden="true"><span class="l10-bullet l10-bullet-sm"><span>10</span></span><media-text token="line10.stops">Stops</media-text></div>
+<l10-stops class="l10-stops"></l10-stops>
+</media-menu-content>
+</media-menu>
+
+<media-captions-button class="media-button media-captions-button l10-btn" id="l10-cc-trigger">
+<media-icon family="line10" name="captions-off" class="media-button-icon media-captions-button-off-icon"></media-icon>
+<media-icon family="line10" name="captions-on" class="media-button-icon media-captions-button-on-icon"></media-icon>
+</media-captions-button>
+<media-tooltip trigger="l10-cc-trigger" side="top" class="media-popup media-popup-safe-area media-tooltip-popup l10-tip">
+<media-tooltip-label></media-tooltip-label>
+<media-tooltip-shortcut class="media-tooltip-shortcut"></media-tooltip-shortcut>
+</media-tooltip>
+
+<button commandfor="l10-settings-popup" class="media-button l10-btn" id="l10-settings-trigger" type="button">
+<media-icon family="line10" name="gear" class="media-button-icon"></media-icon>
+<media-text class="media-settings-button-label" token="menu.settings">Settings</media-text>
+</button>
+<media-tooltip trigger="l10-settings-trigger" side="top" class="media-popup media-popup-safe-area media-tooltip-popup l10-tip">
+<media-text token="menu.settings">Settings</media-text>
+</media-tooltip>
+<media-menu side="top" align="end" class="media-popup media-popup-safe-area media-menu-popup l10-menu" id="l10-settings-popup">
+<media-menu-content class="media-menu-content l10-menu-content">
+<media-menu-item commandfor="l10-speed-content" class="media-menu-item">
+<media-icon family="line10" name="speed" class="media-menu-trigger-icon"></media-icon>
+<media-text token="menu.speed">Speed</media-text>
+<span class="media-menu-hint">
+<span data-part="value" class="media-menu-hint-label"></span>
+<media-icon family="line10" name="chevron" class="media-menu-forward-chevron"></media-icon>
+</span>
+</media-menu-item>
+<media-menu-content class="media-menu-content l10-menu-content" id="l10-speed-content">
+<media-menu-item class="media-menu-back-item">
+<media-icon family="line10" name="chevron" class="media-menu-back-chevron"></media-icon>
+<media-text token="menu.speed">Speed</media-text>
+</media-menu-item>
+<media-menu-separator class="media-menu-separator"></media-menu-separator>
+<media-playback-rate-radio-group class="media-menu-radio-group l10-service">
+<template>
+<media-menu-radio-item class="media-menu-radio-item l10-service-item">
+<span class="l10-service-pattern" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+<span class="l10-service-label">
+<span data-part="label" class="l10-service-rate"></span>
+<span class="l10-service-name" aria-hidden="true">
+<media-text data-svc="stopping" token="line10.service.stopping">Stopping</media-text>
+<media-text data-svc="local" token="line10.service.local">Local</media-text>
+<media-text data-svc="limited" token="line10.service.limited">Limited</media-text>
+<media-text data-svc="express" token="line10.service.express">Express</media-text>
+<media-text data-svc="rapid" token="line10.service.rapid">Rapid</media-text>
+</span>
+</span>
+<media-menu-item-indicator force-mount class="media-menu-indicator">
+<media-icon family="line10" name="check" class="media-menu-radio-icon"></media-icon>
+</media-menu-item-indicator>
+</media-menu-radio-item>
+</template>
+</media-playback-rate-radio-group>
+</media-menu-content>
+
+<media-menu-item commandfor="l10-quality-content" class="media-menu-item">
+<media-icon family="line10" name="switches" class="media-menu-trigger-icon"></media-icon>
+<media-text token="menu.quality">Quality</media-text>
+<span class="media-menu-hint">
+<span data-part="value" class="media-menu-hint-label"></span>
+<media-icon family="line10" name="chevron" class="media-menu-forward-chevron"></media-icon>
+</span>
+</media-menu-item>
+<media-menu-content class="media-menu-content l10-menu-content" id="l10-quality-content">
+<media-menu-item class="media-menu-back-item">
+<media-icon family="line10" name="chevron" class="media-menu-back-chevron"></media-icon>
+<media-text token="menu.quality">Quality</media-text>
+</media-menu-item>
+<media-menu-separator class="media-menu-separator"></media-menu-separator>
+<media-quality-radio-group class="media-menu-radio-group">
+<template>
+<media-menu-radio-item class="media-menu-radio-item">
+<span><span data-part="label"></span><sup data-part="tier" class="media-menu-tier"></sup></span>
+<span data-part="badge" class="media-menu-badge"></span>
+<media-menu-item-indicator force-mount class="media-menu-indicator">
+<media-icon family="line10" name="check" class="media-menu-radio-icon"></media-icon>
+</media-menu-item-indicator>
+</media-menu-radio-item>
+</template>
+</media-quality-radio-group>
+</media-menu-content>
+
+<media-menu-item commandfor="l10-audio-content" class="media-menu-item">
+<media-icon family="line10" name="speech" class="media-menu-trigger-icon"></media-icon>
+<media-text token="menu.audio">Audio</media-text>
+<span class="media-menu-hint">
+<span data-part="value" class="media-menu-hint-label"></span>
+<media-icon family="line10" name="chevron" class="media-menu-forward-chevron"></media-icon>
+</span>
+</media-menu-item>
+<media-menu-content class="media-menu-content l10-menu-content" id="l10-audio-content">
+<media-menu-item class="media-menu-back-item">
+<media-icon family="line10" name="chevron" class="media-menu-back-chevron"></media-icon>
+<media-text token="menu.audio">Audio</media-text>
+</media-menu-item>
+<media-menu-separator class="media-menu-separator"></media-menu-separator>
+<media-audio-track-radio-group class="media-menu-radio-group">
+<template>
+<media-menu-radio-item class="media-menu-radio-item">
+<span data-part="label"></span>
+<media-menu-item-indicator force-mount class="media-menu-indicator">
+<media-icon family="line10" name="check" class="media-menu-radio-icon"></media-icon>
+</media-menu-item-indicator>
+</media-menu-radio-item>
+</template>
+</media-audio-track-radio-group>
+</media-menu-content>
+
+<media-menu-item commandfor="l10-captions-content" class="media-menu-item">
+<media-icon family="line10" name="captions-off" class="media-menu-trigger-icon"></media-icon>
+<media-text token="menu.captions">Captions</media-text>
+<span class="media-menu-hint">
+<span data-part="value" class="media-menu-hint-label"></span>
+<media-icon family="line10" name="chevron" class="media-menu-forward-chevron"></media-icon>
+</span>
+</media-menu-item>
+<media-menu-content class="media-menu-content l10-menu-content" id="l10-captions-content">
+<media-menu-item class="media-menu-back-item">
+<media-icon family="line10" name="chevron" class="media-menu-back-chevron"></media-icon>
+<media-text token="menu.captions">Captions</media-text>
+</media-menu-item>
+<media-menu-separator class="media-menu-separator"></media-menu-separator>
+<media-captions-radio-group class="media-menu-radio-group">
+<template>
+<media-menu-radio-item class="media-menu-radio-item">
+<span data-part="label"></span>
+<span data-part="badge" class="media-menu-badge"></span>
+<media-menu-item-indicator force-mount class="media-menu-indicator">
+<media-icon family="line10" name="check" class="media-menu-radio-icon"></media-icon>
+</media-menu-item-indicator>
+</media-menu-radio-item>
+</template>
+</media-captions-radio-group>
+</media-menu-content>
+</media-menu-content>
+</media-menu>
+
+<media-fullscreen-button class="media-button media-fullscreen-button l10-btn" id="l10-fs-trigger">
+<media-icon family="line10" name="fullscreen-enter" class="media-button-icon media-fullscreen-button-enter-icon"></media-icon>
+<media-icon family="line10" name="fullscreen-exit" class="media-button-icon media-fullscreen-button-exit-icon"></media-icon>
+</media-fullscreen-button>
+<media-tooltip trigger="l10-fs-trigger" side="top" class="media-popup media-popup-safe-area media-tooltip-popup l10-tip">
+<media-tooltip-label></media-tooltip-label>
+<media-tooltip-shortcut class="media-tooltip-shortcut"></media-tooltip-shortcut>
+</media-tooltip>
+</media-controls-group>
+</media-controls-group>
+</div>
+
+</media-tooltip-group>
+</media-controls-content>
+</media-controls>
+
+<media-hotkey keys="Space" action="togglePaused"></media-hotkey>
+<media-hotkey keys="k" action="togglePaused"></media-hotkey>
+<media-hotkey keys="m" action="toggleMuted"></media-hotkey>
+<media-hotkey keys="ArrowRight" action="seekStep"></media-hotkey>
+<media-hotkey keys="ArrowLeft" action="seekStep"></media-hotkey>
+<media-hotkey keys="l" action="seekStep"></media-hotkey>
+<media-hotkey keys="j" action="seekStep"></media-hotkey>
+<media-hotkey keys="ArrowUp" action="volumeStep"></media-hotkey>
+<media-hotkey keys="ArrowDown" action="volumeStep"></media-hotkey>
+<media-hotkey keys="0-9" action="seekToPercent"></media-hotkey>
+<media-hotkey keys="Home" action="seekToPercent" value="0"></media-hotkey>
+<media-hotkey keys="End" action="seekToPercent" value="100"></media-hotkey>
+<media-hotkey keys=">" action="speedUp"></media-hotkey>
+<media-hotkey keys="<" action="speedDown"></media-hotkey>
+<media-hotkey keys="f" action="toggleFullscreen"></media-hotkey>
+<media-hotkey keys="c" action="toggleSubtitles"></media-hotkey>
+<media-hotkey keys="i" action="togglePictureInPicture"></media-hotkey>
+<l10-stop-keys></l10-stop-keys>
+<l10-cue-style></l10-cue-style>
+<l10-fit></l10-fit>
+<media-gesture type="tap" action="togglePaused" pointer="mouse" region="center"></media-gesture>
+<media-gesture type="tap" action="toggleControls" pointer="touch"></media-gesture>
+<media-gesture type="doubletap" action="seekStep" region="left"></media-gesture>
+<media-gesture type="doubletap" action="toggleFullscreen" region="center"></media-gesture>
+<media-gesture type="doubletap" action="seekStep" region="right"></media-gesture>
+<media-status-announcer class="media-status-announcer"></media-status-announcer>
+
+<div aria-hidden="true" class="media-indicator-group l10-indicators">
+<media-volume-indicator class="media-indicator media-volume-indicator l10-ind">
+<media-volume-indicator-fill class="media-volume-indicator-fill">
+<media-icon family="line10" name="volume-high" class="media-volume-indicator-icon media-volume-indicator-high-icon"></media-icon>
+<media-icon family="line10" name="volume-low" class="media-volume-indicator-icon media-volume-indicator-low-icon"></media-icon>
+<media-icon family="line10" name="volume-off" class="media-volume-indicator-icon media-volume-indicator-off-icon"></media-icon>
+<media-volume-indicator-value class="media-volume-indicator-value"></media-volume-indicator-value>
+</media-volume-indicator-fill>
+</media-volume-indicator>
+<media-status-indicator actions="toggleSubtitles,toggleFullscreen,togglePictureInPicture" class="media-indicator media-status-indicator l10-ind">
+<media-icon family="line10" name="captions-on" class="media-status-indicator-icon media-status-indicator-captions-on-icon"></media-icon>
+<media-icon family="line10" name="captions-off" class="media-status-indicator-icon media-status-indicator-captions-off-icon"></media-icon>
+<media-icon family="line10" name="fullscreen-enter" class="media-status-indicator-icon media-status-indicator-fullscreen-enter-icon"></media-icon>
+<media-icon family="line10" name="fullscreen-exit" class="media-status-indicator-icon media-status-indicator-fullscreen-exit-icon"></media-icon>
+<media-icon family="line10" name="pip-enter" class="media-status-indicator-icon media-status-indicator-pip-enter-icon"></media-icon>
+<media-icon family="line10" name="pip-exit" class="media-status-indicator-icon media-status-indicator-pip-exit-icon"></media-icon>
+<media-status-indicator-value></media-status-indicator-value>
+</media-status-indicator>
+<media-seek-indicator class="media-indicator media-seek-indicator l10-ind">
+<media-icon family="line10" name="chevron" class="media-seek-indicator-icon"></media-icon>
+<media-seek-indicator-value class="media-seek-indicator-value"></media-seek-indicator-value>
+</media-seek-indicator>
+</div>
+</media-container>

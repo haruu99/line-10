@@ -1,0 +1,13 @@
+node_modules
+dist
+*.local
+.DS_Store
+
+# Hosting CLIs keep their project links here.
+.vercel
+.netlify
+.wrangler
+
+# Encoded demo media (210 MB) is served from the gh-pages branch
+site/public/media
+dist-site

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Line 10 · a Video.js skin</title>
+    <meta name="description" content="LINE 10 is a Video.js v10 skin drawn like a metro line: the seek bar is the line diagram, chapters are stations, the time is a split-flap board." />
+    <meta name="theme-color" content="#0e0f11" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23f2542d'/%3E%3Ctext x='16' y='21.5' font-family='Arial' font-weight='700' font-size='15' text-anchor='middle' fill='white'%3E10%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Semi+Condensed:wght@500;600;700;800&family=Doto:wght@700;900&display=swap" />
+  </head>
+  <body>
+    <a class="skip" href="#platform">Skip to the player</a>
+
+    <header class="band" aria-label="Line 10">
+      <div class="band-inner">
+        <span class="bullet" aria-hidden="true">10</span>
+        <span class="band-name">Line 10</span>
+        <span class="band-sub">A skin for Video.js v10</span>
+        <span class="band-towards" aria-hidden="true">towards <b>your website</b></span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <aside class="route-card" aria-label="Route 10, Market Street, 1906">
+          <p class="route-card-head"><span class="bullet bullet-sm" aria-hidden="true">10</span> Market Street, 1906</p>
+          <ol class="route-card-stops">
+            <li>Eighth Street</li>
+            <li>Cable Car Crossing</li>
+            <li>The Junction</li>
+            <li>Sightseeing Car</li>
+            <li>Ferry Tower in Sight</li>
+            <li>Lower Market</li>
+            <li class="is-terminus">Ferry Building</li>
+          </ol>
+        </aside>
+        <p class="kicker">Video.js Skins Challenge · 2026</p>
+        <h1 id="hero-title">Every control is a&nbsp;sign.</h1>
+        <p class="lede">
+          The first films were <em>phantom rides</em>: a camera bolted to the front of a streetcar.
+          LINE&nbsp;10 is a player built like the line they rode. The seek bar is the line diagram,
+          chapters are stations, the clock is a split-flap board. Transit signage is the most tested
+          accessible design system we have, read at a glance by everyone, in every light, while
+          things move behind it. A player's controls do the same job.
+        </p>
+      </section>
+
+      <section id="platform" class="platform" aria-labelledby="platform-title">
+        <h2 id="platform-title" class="sr-only">Try the player</h2>
+
+        <div class="screen">
+          <div id="stage" class="stage"></div>
+        </div>
+
+        <div class="console">
+          <fieldset class="console-group routes">
+            <legend>Platform</legend>
+            <div class="route-list">
+              <button type="button" class="route" data-route-btn="market" aria-pressed="true">
+                <span class="route-plat" aria-hidden="true">1</span>
+                <span class="route-text">
+                  <span class="route-name">Market Street, 1906</span>
+                  <span class="route-meta">Miles Brothers · towards the Ferry Building · original piano score</span>
+                </span>
+              </button>
+              <button type="button" class="route" data-route-btn="dawn" aria-pressed="false">
+                <span class="route-plat" aria-hidden="true">2</span>
+                <span class="route-text">
+                  <span class="route-name">Cosmic Dawn</span>
+                  <span class="route-meta">NASA · streamed by Mux · storyboard previews</span>
+                </span>
+              </button>
+            </div>
+          </fieldset>
+
+          <fieldset class="console-group lines">
+            <legend>Line colour</legend>
+            <div class="swatches">
+              <label class="swatch" style="--sw: #f2542d"><input type="radio" name="line" value="#f2542d" data-name="vermilion" checked /><span class="swatch-dot" aria-hidden="true">10</span><span class="swatch-name">Vermilion</span></label>
+              <label class="swatch" style="--sw: #1f6feb"><input type="radio" name="line" value="#1f6feb" data-name="blue" /><span class="swatch-dot" aria-hidden="true">10</span><span class="swatch-name">Blue</span></label>
+              <label class="swatch" style="--sw: #00995e"><input type="radio" name="line" value="#00995e" data-name="green" /><span class="swatch-dot" aria-hidden="true">10</span><span class="swatch-name">Green</span></label>
+              <label class="swatch" style="--sw: #ffc21a"><input type="radio" name="line" value="#ffc21a" data-name="gold" /><span class="swatch-dot" aria-hidden="true">10</span><span class="swatch-name">Gold</span></label>
+              <label class="swatch" style="--sw: #8b5cf6"><input type="radio" name="line" value="#8b5cf6" data-name="violet" /><span class="swatch-dot" aria-hidden="true">10</span><span class="swatch-name">Violet</span></label>
+            </div>
+          </fieldset>
+
+          <div class="console-group langs">
+            <label for="lang" class="legend">Language</label>
+            <div class="select">
+              <select id="lang">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="ja">日本語</option>
+                <option value="ar">العربية (RTL)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="signs" aria-labelledby="signs-title">
+        <div class="section-head">
+          <span class="section-num" aria-hidden="true">01</span>
+          <h2 id="signs-title">Read the signs</h2>
+          <p>Nothing here is decoration. Each piece of signage is a real control or a real state.</p>
+        </div>
+        <ol class="legend-list">
+          <li><span class="sign sign-line" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>The line is the seek bar</h3><p>Ridden track in the line colour, buffered track laid, the rest planned. Chapters are stations, named on wide players.</p></div></li>
+          <li><span class="sign sign-flap" aria-hidden="true"><i>0</i><i>4</i>:<i>2</i><i>8</i></span><div><h3>The clock is a split-flap board</h3><p>Only changed digits flip. Under reduced motion they just change. Screen readers get the plain time.</p></div></li>
+          <li><span class="sign sign-led" aria-hidden="true">Quiet carriage</span><div><h3>The LED strip tells you the state</h3><p>Ready to depart, In service, Holding at platform (paused), Approaching (buffering), Quiet carriage (muted), Express service, This service terminates here (ended).</p></div></li>
+          <li><span class="sign sign-blind" aria-hidden="true"><b>10</b> towards Ferry Building</span><div><h3>The blind names the last stop</h3><p>Read from the final chapter, so you know where this video ends before you start.</p></div></li>
+          <li><span class="sign sign-stops" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>Stops is the chapter list</h3><p>A timetable you can arrow through. <kbd>[</kbd> and <kbd>]</kbd> jump to the previous or next stop from anywhere.</p></div></li>
+          <li><span class="sign sign-svc" aria-hidden="true"><i></i><i></i><i class="off"></i><i></i><i class="off"></i></span><div><h3>Speed is the service pattern</h3><p>Stopping, Local, Limited, Express, Rapid: the faster the service, the fewer stops it calls at.</p></div></li>
+          <li><span class="sign sign-hazard" aria-hidden="true">Service disruption</span><div><h3>Errors are hazard plates</h3><p>A real dialog with a title, a reason and a way out, never a toast that disappears.</p></div></li>
+          <li><span class="sign sign-cue" aria-hidden="true">Next stop: Third Street</span><div><h3>Captions are the passenger display</h3><p>Amber text on solid black, sized to the player. Readable over any frame.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="gallery" aria-labelledby="gallery-title">
+        <div class="section-head">
+          <span class="section-num" aria-hidden="true">02</span>
+          <h2 id="gallery-title">Every platform</h2>
+          <p>The same skin, sized by container queries and translated through Video.js i18n. Station names fold away as the platform narrows; the line never does.</p>
+        </div>
+        <div class="minis">
+          <figure class="mini mini-phone">
+            <div class="mini-slot" data-mini="market"></div>
+            <figcaption><b>Phone</b> 360px, 44px targets on touch</figcaption>
+          </figure>
+          <figure class="mini mini-rtl">
+            <div class="mini-slot" data-mini="dawn" data-lang="ar"></div>
+            <figcaption><b>العربية</b> right to left, clock and line stay readable</figcaption>
+          </figure>
+          <figure class="mini mini-ja">
+            <div class="mini-slot" data-mini="market" data-lang="ja"></div>
+            <figcaption><b>日本語</b> every visible label is a translation token</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="access" aria-labelledby="access-title">
+        <div class="section-head">
+          <span class="section-num" aria-hidden="true">03</span>
+          <h2 id="access-title">Signage is accessibility</h2>
+          <p>Built on Video.js components, so roles, names, hotkeys and announcements come for free. The skin's job is to never take them away.</p>
+        </div>
+        <div class="access-grid">
+          <div class="keys">
+            <h3>Keyboard</h3>
+            <dl class="keymap">
+              <div><dt><kbd>Space</kbd> <kbd>K</kbd></dt><dd>Depart / hold</dd></div>
+              <div><dt><kbd>←</kbd> <kbd>→</kbd> <kbd>J</kbd> <kbd>L</kbd></dt><dd>Back / ahead 10 s</dd></div>
+              <div><dt><kbd>[</kbd> <kbd>]</kbd></dt><dd>Previous / next stop</dd></div>
+              <div><dt><kbd>0</kbd>–<kbd>9</kbd></dt><dd>Jump to 0–90% of the line</dd></div>
+              <div><dt><kbd>Home</kbd> <kbd>End</kbd></dt><dd>First stop / terminus</dd></div>
+              <div><dt><kbd>&lt;</kbd> <kbd>&gt;</kbd></dt><dd>Slower / faster service</dd></div>
+              <div><dt><kbd>↑</kbd> <kbd>↓</kbd> <kbd>M</kbd></dt><dd>Volume / quiet carriage</dd></div>
+              <div><dt><kbd>C</kbd></dt><dd>Captions</dd></div>
+              <div><dt><kbd>F</kbd> <kbd>I</kbd></dt><dd>Fullscreen / picture in picture</dd></div>
+              <div><dt><kbd>Esc</kbd></dt><dd>Close any menu, focus goes back to its button</dd></div>
+            </dl>
+          </div>
+          <ul class="checks">
+            <li><b>One focus ring</b> White inside black, so it shows over a snowfield or a tunnel.</li>
+            <li><b>Solid plates</b> Signage black at 94%, not glass. Text stays above 7:1 on any frame.</li>
+            <li><b>Targets</b> 40px buttons, 44px on touch. The line is 24px tall to grab, 6px to see.</li>
+            <li><b>Reduced motion</b> The flaps stop flipping, LEDs stop scrolling, menus stop growing.</li>
+            <li><b>Reduced transparency, more contrast</b> Plates go fully solid, scrims go away.</li>
+            <li><b>Forced colours</b> Every plate, line and button maps to system colours.</li>
+            <li><b>Text on the line colour</b> Picked by <code>contrast-color()</code>, so a gold line gets black text.</li>
+            <li><b>Six languages, both directions</b> All copy through i18n tokens; Arabic mirrors the controls.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="foot-inner">
+        <p><span class="bullet bullet-sm" aria-hidden="true">10</span> LINE 10, a Video.js v10 skin. HTML and CSS, built on the Scaffold skin's structure.</p>
+        <p class="credits">
+          <i>A Trip Down Market Street</i> (Miles Brothers, 1906), public domain, via the Internet Archive.
+          Score: original solo piano, composed for this page.
+          <i>Cosmic Dawn</i>: NASA, streamed by Mux.
+          Type: Barlow and Doto (SIL Open Font License).
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
