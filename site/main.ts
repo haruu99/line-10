@@ -20,6 +20,9 @@ type Route = {
   media: string;
 };
 
+// LINE 10's own Mux asset: A Trip Down Market Street with the original score.
+const MARKET_MUX_ID = 'knYphH43CPZ00OzhOl7GFDQ8ELyNi6V4v025Nw1s9009Rc';
+// Video.js sandbox's Cosmic Dawn trailer.
 const MUX_ID = '83EzHOvVzVN01AsrD01BCpiH02Pj3S8mfzBOu101w2nHC5s';
 
 const ROUTES: Record<string, Route> = {
@@ -28,11 +31,11 @@ const ROUTES: Record<string, Route> = {
     title: 'A Trip Down Market Street, 1906',
     ratio: '4 / 3',
     poster: './media/market/poster.jpg',
-    media: `<hls-video src="./media/market/master.m3u8" playsinline crossorigin preload="metadata">
+    media: `<mux-video src="https://stream.mux.com/${MARKET_MUX_ID}.m3u8" playsinline crossorigin preload="metadata">
       <track kind="chapters" label="Stops" srclang="en" src="./media/market/chapters.vtt" default>
       <track kind="metadata" label="thumbnails" src="./media/market/storyboard.vtt" default>
       <track kind="captions" label="English" srclang="en" src="./media/market/captions.en.vtt">
-    </hls-video>`,
+    </mux-video>`,
   },
   dawn: {
     id: 'dawn',
